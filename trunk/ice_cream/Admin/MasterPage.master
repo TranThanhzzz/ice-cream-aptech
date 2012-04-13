@@ -1,0 +1,39 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Admin_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Admin</title>
+    <link rel="stylesheet" href="../Css/admin.css" type="text/css" media="screen" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+    <div class="warper">
+        <div class="head">
+            <div class="logo"></div>
+            <div class="menu">
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Books</li>
+                    <li>Feed Back</li>
+                    <li>FAQ</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+                 <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                </asp:contentplaceholder>
+         </div>
+        <div class="footer"></div>
+    </div>
+    
+    <div>
+        
+    </div>
+    </form>
+</body>
+</html>
