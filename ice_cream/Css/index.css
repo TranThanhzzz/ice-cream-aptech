@@ -1,0 +1,131 @@
+﻿body 
+{
+	margin:0 auto;
+	background-color:#FFDAB9;
+
+}
+.warper
+{
+	width:1036px;
+	min-height:600px;
+	max-height:2000px;
+	margin:0 auto;
+	
+}
+.head
+{
+	width:1036px;
+	height:153px;
+	
+}
+.logo
+{
+	width:1036px;
+	height:110px;
+	background-color:White;
+}
+.menu-hr
+{
+	width:1036px;
+	height:3px;
+	background-color:#CD853F;
+}
+.menu
+{
+	width:1036px;
+	height:40px;
+	padding-top:6px;
+	background-color:#FFFAFA;
+	font-size:18px;
+}
+.menu ul
+{
+	height:40px;
+	margin:0 0 0 0;
+	height:30px;
+}
+.menu ul li
+{
+	height:40px;
+	display:inline;
+	list-style-type:none;
+	margin-left:20px;
+	
+}
+.menu ul li:hover
+{
+	background-color:White;
+	
+}
+.content
+{
+	width:1036px;
+	min-height:600px;
+	max-height:2000px;
+	margin:0 0 auto;
+	
+}
+.nav
+{
+	width:200px;
+	min-height:600px;
+	max-height:2000px;
+	background-color:White;
+	float:left;
+}
+.login
+{
+	width:200px;
+	height:150px;
+	background-color:White;	
+}
+.loginTitle
+{
+	width:200px;
+	height:30px;
+	background-color:#CD853F;
+	padding-left:60px;	
+	padding-top:3px;
+}
+input{width:120px;}
+.loginUser
+{
+	width:200px;
+	height:40px;	
+}
+.loginPass
+{
+	width:200px;
+	height:40px;	
+}
+.loginButton
+{
+	width:200px;
+	height:40px;	
+}
+.button
+{
+	width:80px;
+	margin-left:30px;
+}
+.rightContent
+{
+	width:836px;
+	min-height:600px;
+	max-height:2000px;
+	background-color:#F5F5F5;
+	float:left;
+}
+.footer
+{
+	width:1036px;
+	height:100px;
+	margin:0 0 auto;
+	background-color:#CD853F;
+}
+
+.input_form
+{
+	width:200px;
+}
+

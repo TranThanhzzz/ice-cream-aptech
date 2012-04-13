@@ -1,0 +1,50 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Home</title>
+    <link rel="stylesheet" href="Css/index.css" type="text/css" media="screen" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="warper">
+        <div class="head">
+            <div class="logo"></div>
+            <div class="menu-hr"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="Default.aspx">Home</a></li>
+                    <li><a href="AboutUs.aspx">About Us</a></li>
+                    <li><a href="Books.aspx">Books</a></li>
+                    <li><a href="FeedBack.aspx">Feed Back</a></li>
+                    <li><a href="FAQ.aspx">FAQ</a></li>
+                    <li><a href="Contact.aspx">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="nav">
+                <div class="login">
+                    <div class="loginTitle">Login Form</div>
+                    <div class="loginUser"><span>Username : </span><input type="text" name="UserName" id="UserName"/></div>
+                    <div class="loginPass"><span>Password : </span><input type="password" name="PassWord" id="PassWord"/></div>
+                    <div class="loginButton"><span><a href="register.aspx" style="padding-left:40px;">Sign in</a></span><input class="button" type="submit"  value="Submit" id="submit"/></div>
+                </div>
+            <div class="login">
+                    <div class="loginTitle">Categorys Recipe</div>
+                    
+            </div>
+            </div>
+            
+            <div class="rightContent">
+                 <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                </asp:contentplaceholder>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+    </form>
+</body>
+</html>
