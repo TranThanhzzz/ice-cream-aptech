@@ -30,13 +30,21 @@ public class CategoryRecipeModel
         get { return _status; }
         set { _status = value; }
     }
+    private String _image;
+
+    public String Image
+    {
+        get { return _image; }
+        set { _image = value; }
+    }
 
     public CategoryRecipeModel() { }
 
-	public CategoryRecipeModel(int id, String name, int status)
+	public CategoryRecipeModel(int id, String name,String image, int status)
 	{
         this.Id = id;
         this.Name = name;
         this.Status = status;
+        this.Image = Image;
 	}
 }

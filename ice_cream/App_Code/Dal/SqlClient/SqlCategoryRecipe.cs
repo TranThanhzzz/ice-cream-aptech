@@ -5,10 +5,11 @@ using System.Web;
 using System.Data.SqlClient;
 using System.Data;
 
+
 /// <summary>
 /// Summary description for SqlCategoryRecipe
 /// </summary>
-public class SqlCategoryRecipe : CategoryRecipe
+public class SqlCategoryRecipe : CategoryRecipeProvider
 {
 	public SqlCategoryRecipe()
 	{
@@ -16,11 +17,12 @@ public class SqlCategoryRecipe : CategoryRecipe
 		// TODO: Add constructor logic here
 		//
 	}
+
     public override bool DeleteCategoryRecipe(int id)
     {
         using (SqlConnection cn = new SqlConnection(this.ConnectionString))
         {
-            SqlCommand cmd = new SqlCommand("proc_DELETE_CATEGORYRECIPE", cn);
+            SqlCommand cmd = new SqlCommand("DELETE_CategoryRecipe", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             cn.Open();
             int re = ExecuteNonQuery(cmd);
@@ -32,12 +34,12 @@ public class SqlCategoryRecipe : CategoryRecipe
     {
         using (SqlConnection cn = new SqlConnection(this.ConnectionString))
         {
-            SqlCommand cmd = new SqlCommand("proc_UPDATE_CATEGORYRECIPE", cn);
+            SqlCommand cmd = new SqlCommand("proc_UPDATE_CATEGERYRECIPE", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@ID", SqlDbType.Int).Value = model.Id;
             cmd.Parameters.Add("@NAME", SqlDbType.NVarChar).Value = model.Name;
             cmd.Parameters.Add("@STATUS", SqlDbType.Int).Value = model.Status;
-            cmd.Parameters.Add("@Description", SqlDbType.NVarChar).Value = model.Description;
+
             cn.Open();
             int re = ExecuteNonQuery(cmd);
             return (re == 1);
@@ -48,11 +50,11 @@ public class SqlCategoryRecipe : CategoryRecipe
     {
         using (SqlConnection cn = new SqlConnection(this.ConnectionString))
         {
-            SqlCommand cmd = new SqlCommand("proc_ADD_CATEGORYRECIPE", cn);
+            SqlCommand cmd = new SqlCommand("proc_ADD_CATEGERYRECIPE", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@NAME", SqlDbType.NVarChar).Value = model.Name;
             cmd.Parameters.Add("@STATUS", SqlDbType.Int).Value = model.Status;
-            cmd.Parameters.Add("@Description", SqlDbType.NVarChar).Value = model.Description;
+
             cn.Open();
             int re = ExecuteNonQuery(cmd);
             return (re == 1);
@@ -73,7 +75,6 @@ public class SqlCategoryRecipe : CategoryRecipe
                 CategoryRecipeModel model = new CategoryRecipeModel {
                     (int)reader["id"],
                     reader["name"].ToString,
-                    reader["image"].ToString,
                     (int)reader["STATUS"]
                 };
                 return model;
