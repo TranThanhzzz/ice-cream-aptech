@@ -63,9 +63,9 @@ public class SqlInformation : InformationProvider
     {
         using (SqlConnection cn = new SqlConnection(this.ConnectionString))
         {
-            SqlCommand cmd = new SqlCommand("proc_GET_INFORMATION_BY_ID", cn);
+            SqlCommand cmd = new SqlCommand("tbh_Articles_GetArticleByID", cn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@ID", SqlDbType.Int).Value = id;
+            cmd.Parameters.Add("@ArticleID", SqlDbType.Int).Value = articleID;
             cn.Open();
             IDataReader reader = ExecuteReader(cmd, CommandBehavior.SingleRow);
             if (reader.Read())
